@@ -18,10 +18,19 @@ class ViewController: UIViewController, UITableViewDelegate {
         table.dataSource = self
     }
 
+    @IBAction func didTabAdd(){
+        // show add vc
+    }
+    
+    
+    @IBAction func didTabTest(){
+        // fire test notification
+    }
 
 }
 
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

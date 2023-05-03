@@ -13,6 +13,8 @@
 		DC1D2DFB2A02EB7B00941AF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1D2DF92A02EB7B00941AF3 /* Main.storyboard */; };
 		DC1D2DFD2A02EB7E00941AF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC1D2DFC2A02EB7E00941AF3 /* Assets.xcassets */; };
 		DC1D2E002A02EB7E00941AF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1D2DFE2A02EB7E00941AF3 /* LaunchScreen.storyboard */; };
+		DC1D2E092A02F2FF00941AF3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D2E072A02F2FF00941AF3 /* AddViewController.swift */; };
+		DC1D2E0A2A02F2FF00941AF3 /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1D2E082A02F2FF00941AF3 /* AddViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DC1D2DFC2A02EB7E00941AF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC1D2DFF2A02EB7E00941AF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC1D2E012A02EB7E00941AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC1D2E072A02F2FF00941AF3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DC1D2E082A02F2FF00941AF3 /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				DC1D2DFC2A02EB7E00941AF3 /* Assets.xcassets */,
 				DC1D2DFE2A02EB7E00941AF3 /* LaunchScreen.storyboard */,
 				DC1D2E012A02EB7E00941AF3 /* Info.plist */,
+				DC1D2E072A02F2FF00941AF3 /* AddViewController.swift */,
+				DC1D2E082A02F2FF00941AF3 /* AddViewController.xib */,
 			);
 			path = reminderApp;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				DC1D2E002A02EB7E00941AF3 /* LaunchScreen.storyboard in Resources */,
 				DC1D2DFD2A02EB7E00941AF3 /* Assets.xcassets in Resources */,
+				DC1D2E0A2A02F2FF00941AF3 /* AddViewController.xib in Resources */,
 				DC1D2DFB2A02EB7B00941AF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				DC1D2DF82A02EB7B00941AF3 /* ViewController.swift in Sources */,
 				DC1D2DF42A02EB7B00941AF3 /* AppDelegate.swift in Sources */,
+				DC1D2E092A02F2FF00941AF3 /* AddViewController.swift in Sources */,
 				DC1D2DF62A02EB7B00941AF3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
