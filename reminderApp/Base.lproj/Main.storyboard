@@ -31,9 +31,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reminders" id="yYw-TV-RYF">
-                        <barButtonItem key="leftBarButtonItem" title="test" id="z5Z-kv-RIC"/>
+                        <barButtonItem key="leftBarButtonItem" title="test" id="z5Z-kv-RIC">
+                            <connections>
+                                <action selector="didTabTest" destination="BYZ-38-t0r" id="0hw-wI-44o"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus.circle.fill" catalog="system" id="igz-rP-BIw">
                             <color key="tintColor" red="0.13725490200000001" green="0.062745098040000002" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTabAdd" destination="BYZ-38-t0r" id="xeW-ui-cK5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

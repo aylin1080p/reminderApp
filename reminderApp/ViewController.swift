@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import UserNotifications
 
-class ViewController: UIViewController, UITableViewDelegate {
+
+class ViewController: UIViewController {
 
     @IBOutlet var table: UITableView!
     
@@ -25,6 +27,15 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     @IBAction func didTabTest(){
         // fire test notification
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: {success, error in
+            if success {
+                //schedule test
+            }
+            else if let error = error{
+            print("error")
+            }
+        })
+        
     }
 
 }
