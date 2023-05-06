@@ -51,16 +51,58 @@
             </objects>
             <point key="canvasLocation" x="1028.2442748091603" y="4.9295774647887329"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="n6X-9p-ge3">
             <objects>
-                <viewController id="Mce-J8-aVQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="add" id="Mce-J8-aVQ" customClass="AddViewController" customModule="reminderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x8Z-wB-fsw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="316-tt-PQH">
+                                <rect key="frame" x="10" y="69" width="373" height="52"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="A1V-WB-Gqt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Body..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bP-9e-mfE">
+                                <rect key="frame" x="10" y="141" width="373" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="w1u-oZ-OYE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4jB-2k-aOK">
+                                <rect key="frame" x="10" y="203" width="373" height="605"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cRv-fJ-VIM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="316-tt-PQH" firstAttribute="leading" secondItem="cRv-fJ-VIM" secondAttribute="leading" constant="10" id="03p-hM-9gU"/>
+                            <constraint firstItem="cRv-fJ-VIM" firstAttribute="trailing" secondItem="316-tt-PQH" secondAttribute="trailing" constant="10" id="1fe-0S-Wj8"/>
+                            <constraint firstItem="cRv-fJ-VIM" firstAttribute="trailing" secondItem="8bP-9e-mfE" secondAttribute="trailing" constant="10" id="3o9-eH-87D"/>
+                            <constraint firstItem="4jB-2k-aOK" firstAttribute="top" secondItem="8bP-9e-mfE" secondAttribute="bottom" constant="10" id="6xp-El-Te4"/>
+                            <constraint firstItem="316-tt-PQH" firstAttribute="top" secondItem="cRv-fJ-VIM" secondAttribute="top" constant="10" id="8UN-Jt-xuG"/>
+                            <constraint firstItem="4jB-2k-aOK" firstAttribute="leading" secondItem="x8Z-wB-fsw" secondAttribute="leading" constant="10" id="WWz-iX-ak6"/>
+                            <constraint firstItem="316-tt-PQH" firstAttribute="leading" secondItem="cRv-fJ-VIM" secondAttribute="leading" constant="10" id="eYg-KV-m39"/>
+                            <constraint firstItem="8bP-9e-mfE" firstAttribute="top" secondItem="316-tt-PQH" secondAttribute="bottom" constant="20" id="j1Q-pj-auD"/>
+                            <constraint firstItem="8bP-9e-mfE" firstAttribute="leading" secondItem="cRv-fJ-VIM" secondAttribute="leading" constant="10" id="l3H-Gh-wbc"/>
+                            <constraint firstItem="316-tt-PQH" firstAttribute="top" secondItem="cRv-fJ-VIM" secondAttribute="top" constant="10" id="qgb-Sc-zYP"/>
+                            <constraint firstItem="cRv-fJ-VIM" firstAttribute="bottom" secondItem="4jB-2k-aOK" secondAttribute="bottom" constant="10" id="r11-z2-GyP"/>
+                            <constraint firstItem="cRv-fJ-VIM" firstAttribute="trailing" secondItem="316-tt-PQH" secondAttribute="trailing" constant="10" id="sMz-ob-47s"/>
+                            <constraint firstAttribute="trailing" secondItem="4jB-2k-aOK" secondAttribute="trailing" constant="10" id="sUX-OA-m6w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bodyField" destination="8bP-9e-mfE" id="LLh-hc-Go0"/>
+                        <outlet property="datePicker" destination="4jB-2k-aOK" id="fdX-Mn-Ype"/>
+                        <outlet property="titleField" destination="316-tt-PQH" id="cZP-kq-BNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig4-K3-Wlw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

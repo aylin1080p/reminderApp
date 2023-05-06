@@ -22,6 +22,23 @@ class ViewController: UIViewController {
 
     @IBAction func didTabAdd(){
         // show add vc
+        guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddViewController else{
+            return
+        }
+        
+        vc.title = "New Reminder"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { title , body, date in
+            DispatchQueue.main.async {
+                self.navigationController?.popToRootViewController(animated: true)
+                let new = MyReminder(title: title, date: date, idendifier: "id_\(title)")
+                self.models.append(new)
+                self.table.reloadData()
+                
+            }
+            
+        }
+        navigationController?.pushViewController(vc , animated: true)
     }
     
     
@@ -32,12 +49,13 @@ class ViewController: UIViewController {
                 //schedule test
                 self.scheduleTest()
             }
-            else if let error = error{
+            else if error != nil {
             print("error")
             }
         })
         
     }
+    
     func scheduleTest() {
         let content = UNMutableNotificationContent()
         content.title = "Hello world"
