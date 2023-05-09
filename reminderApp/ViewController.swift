@@ -35,6 +35,20 @@ class ViewController: UIViewController {
                 self.models.append(new)
                 self.table.reloadData()
                 
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.sound = .default
+                content.body = body
+                let targetDate = date
+                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, . minute, .second], from: targetDate), repeats: false)
+                
+                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: {error in
+                    if error != nil {
+                        print("something went wrong")
+                    }
+                })
+                
             }
             
         }
